@@ -68,6 +68,7 @@ const Pricing = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-end gap-8 mt-24">
             {pricingTiers.map((item, index) => (
               <div
+              key={item.title}
                 className={`shadow-md w-full max-w-[350px]  lg:max-w-[400px] px-8 pt-4 pb-12 rounded-lg h-full ${
                   index === 1 ? "bg-black text-white" : "bg-white"
                 } flex flex-col gap-8`}
@@ -98,7 +99,7 @@ const Pricing = () => {
 
                 <ul className="flex flex-col gap-4">
                   {item.features.map((item) => (
-                    <li className="flex items-center gap-2">
+                    <li key={item} className="flex items-center gap-2">
                       <FaCheck /> {item}
                     </li>
                   ))}
