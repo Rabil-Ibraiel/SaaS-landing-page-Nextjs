@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    .btn {
+        @apply py-2 px-4 rounded-lg font-medium tracking-tight capitalize inline-flex items-center;
+    }
+
+    .btn-primary {
+        @apply bg-black text-white;
+    }
+
+    .btn-text {
+        @apply text-black bg-transparent;
+    }
+
+    .logo-ticker {
+        @apply h-8 w-auto;
+    }
+
+    .mask-image {
+        mask-image: linear-gradient(to right, transparent, black, transparent);
+    }
+
+    .title {
+        @apply text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6 pb-2;
+    }
+
+    .feature {
+        @apply border-2 border-[#222]/10 py-1 px-3 text-sm lg:text-lg rounded-lg tracking-tight;
+    }
+
+    .description {
+        @apply text-xl text-[#010D3E] tracking-tight mt-6;
+    }
+}
