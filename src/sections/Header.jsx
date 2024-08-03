@@ -54,7 +54,13 @@ const Header = () => {
               <Link href={"/"}>Customers</Link>
               <Link href={"/"}>Updates</Link>
               <Link href={"/"}>Help</Link>
-              <button className="btn btn-primary">get for free</button>
+              <button
+                className={`btn ${
+                  open ? "bg-white text-black" : "btn-primary"
+                }`}
+              >
+                get for free
+              </button>
             </nav>
           </div>
         </div>
