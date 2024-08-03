@@ -8,20 +8,22 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const Product = () => {
-  const ref = useRef(null)
-  const {scrollYProgress} = useScroll({
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start']
-  })
+    offset: ["start end", "end start"],
+  });
 
-  const rotation = useTransform(scrollYProgress, [0, 1], [-10, 20])
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
-  console.log(rotation)
+  const rotation = useTransform(scrollYProgress, [0, 1], [-10, 20]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section ref={ref} className="bg-gradient-to-b from-[#ffffff] to-[#d2dcff] h-fit pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip">
+    <section
+      ref={ref}
+      className="bg-gradient-to-b from-[#ffffff] to-[#d2dcff] h-fit pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip"
+    >
       <div className="container">
         <div className="flex items-center justify-between flex-col">
-          <div className="flex flex-col items-center text-center xl:w-[60%]">
+          <div className="flex flex-col items-center text-center w-fit md:w-[700px]">
             <span className="feature">Boost your productivity</span>
             <h1 className="title">A more effective way to track progress</h1>
             <p className="description">
@@ -42,7 +44,7 @@ const Product = () => {
               height={262}
             />
             <motion.img
-            style={{translateY: translateY}}
+              style={{ translateY: translateY }}
               src={tube.src}
               alt="Tube"
               className="hidden md:block absolute bottom-24 -left-36"

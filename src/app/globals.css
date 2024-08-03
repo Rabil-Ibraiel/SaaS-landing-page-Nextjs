@@ -25,6 +25,18 @@
         mask-image: linear-gradient(to right, transparent, black, transparent);
     }
 
+    .mask-image-testimonials {
+        mask-image: linear-gradient(to bottom, transparent, black, black, transparent);
+    }
+
+    .bg-size-200 {
+        background-size: 200%
+    }
+
+    .text-effect {
+        background: linear-gradient(to right, #DD7DDF, #E1CD86, #BBCD92, #71C2FF, #3BFFFF, #DD7DDF, #DD7DDF, #E1CD86, #BBCD92, #71C2FF, #3BFFFF, #DD7DDF)
+    }
+
     .title {
         @apply text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6 pb-2;
     }
@@ -35,5 +47,9 @@
 
     .description {
         @apply text-xl text-[#010D3E] tracking-tight mt-6;
+    }
+
+    .card {
+        @apply shadow-md w-full max-w-[350px]  lg:max-w-[400px] px-8 py-8 rounded-lg h-full flex flex-col gap-8
     }
 }

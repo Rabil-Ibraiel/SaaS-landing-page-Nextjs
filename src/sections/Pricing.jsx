@@ -1,5 +1,7 @@
-import { FaCheck } from "react-icons/fa";
+"use client";
 
+import { FaCheck } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Pricing = () => {
   const pricingTiers = [
     {
@@ -68,10 +70,10 @@ const Pricing = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-end gap-8 mt-24">
             {pricingTiers.map((item, index) => (
               <div
-              key={item.title}
-                className={`shadow-md w-full max-w-[350px]  lg:max-w-[400px] px-8 pt-4 pb-12 rounded-lg h-full ${
+                key={item.title}
+                className={`card ${
                   index === 1 ? "bg-black text-white" : "bg-white"
-                } flex flex-col gap-8`}
+                } `}
               >
                 <div className="flex items-center justify-between w-full font-bold">
                   <span
@@ -79,9 +81,18 @@ const Pricing = () => {
                   >
                     {item.title}
                   </span>
-                  <span className="border-2 border-white/20 rounded-xl py-1 px-2">
+                  <motion.span
+                    animate={{ backgroundPositionX: "-100%" }}
+                    transition={{
+                      repeatType: "loop",
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "linear",
+                    }}
+                    className="border-2 border-white/20 rounded-xl bg-200 py-1 px-2 bg-size-200 text-effect text-transparent bg-clip-text"
+                  >
                     {index === 1 && "Most Popular"}
-                  </span>
+                  </motion.span>
                 </div>
                 <h3>
                   <span className="font-bold text-3xl">
